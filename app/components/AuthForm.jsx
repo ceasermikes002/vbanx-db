@@ -1,8 +1,11 @@
 "use client"
+// Import necessary dependencies
 import { Auth } from "@supabase/auth-ui-react";
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 
+// AuthForm component
 export default function AuthForm() {
+    // Initialize Supabase client
     const supabase = createClientComponentClient();
 
     return (
@@ -10,12 +13,12 @@ export default function AuthForm() {
             <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
                 <Auth
                     supabaseClient={supabase}
-                    view="magic_link"
-                    redirectTo="https://vbanx-db.vercel.app/auth/callback"
-                    showLinks={false}
-                    providers={['google']}
+                    view="magic_link"  // Use magic link for authentication
+                    redirectTo="https://vbanx-db.vercel.app/auth/callback"  // Callback URL
+                    showLinks={false}  // Do not show sign-in/up links
+                    providers={['google']}  // Enable Google as a provider
                     appearance={{
-                        theme: 'dark',
+                        theme: 'dark',  // Set theme to dark
                         button: {
                             className: 'w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4'
                         },
