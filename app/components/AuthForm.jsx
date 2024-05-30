@@ -14,7 +14,7 @@ export default function AuthForm() {
                 <Auth
                     supabaseClient={supabase}
                     view="magic_link"  // Use magic link for authentication
-                    redirectTo="https://vbanx-db.vercel.app/auth/callback"  // Callback URL
+                    redirectTo='https://vivbanx-db.vercel.app/auth/callback'  // Callback URL
                     showLinks={false}  // Do not show sign-in/up links
                     providers={['google']}  // Enable Google as a provider
                     appearance={{
