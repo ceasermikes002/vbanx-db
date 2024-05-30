@@ -11,7 +11,7 @@ export default function AuthForm() {
                 <Auth
                     supabaseClient={supabase}
                     view="magic_link"
-                    redirectTo="https://vbanx-db.vercel.app//auth/callback"
+                    redirectTo="https://vbanx-db.vercel.app/auth/callback"
                     showLinks={false}
                     providers={['google']}
                     appearance={{
